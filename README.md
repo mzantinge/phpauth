@@ -1,5 +1,9 @@
 # phpauth
 
+Based on:
+
+<https://docs.microsoft.com/en-us/azure/app-service/tutorial-auth-aad?pivots=platform-linux>
+
 ```bash
 az group create --name phpauth --location "West Europe"
 
@@ -72,6 +76,7 @@ curl -H "Authorization: Bearer ${response}" https://graph.microsoft.com/oidc/use
 Links
 
 <https://stackoverflow.com/questions/55282008/is-it-possible-to-add-multiple-audiences-to-azureadbearer-token>
+
 <https://www.ludovicmedard.com/azure-api-management-and-oauth-tokens-for-multiple-backend-services/>
 
 behind reverse proxy
@@ -86,7 +91,9 @@ az rest --uri /subscriptions/5053b074-62e4-469e-91a2-f56553bdfebb/resourceGroups
 
 more links
 <https://azure.github.io/AppService/2021/03/26/Secure-resilient-site-with-custom-domain.html>
+
 <https://thx1140front.azurewebsites.net/.auth/login/aad/callback>
+
 <https://thx1140front.azurewebsites.net/.auth/me>
 
 notes
