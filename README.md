@@ -4,6 +4,8 @@ Based on:
 
 <https://docs.microsoft.com/en-us/azure/app-service/tutorial-auth-aad?pivots=platform-linux>
 
+## Steps to do
+
 ```bash
 az group create --name phpauth --location "West Europe"
 
@@ -73,7 +75,7 @@ response=$(curl -X POST -F 'grant_type=urn:ietf:params:oauth:grant-type:jwt-bear
 curl -H "Authorization: Bearer ${response}" https://graph.microsoft.com/oidc/userinfo
 ```
 
-Links
+## Links
 
 <https://stackoverflow.com/questions/55282008/is-it-possible-to-add-multiple-audiences-to-azureadbearer-token>
 
@@ -89,14 +91,17 @@ az rest --uri /subscriptions/5053b074-62e4-469e-91a2-f56553bdfebb/resourceGroups
 az rest --uri /subscriptions/5053b074-62e4-469e-91a2-f56553bdfebb/resourceGroups/rg-appsvc/providers/Microsoft.Web/sites/app1thx1139/config/authsettingsV2?api-version=2020-09-01 --method put --body @auth.json 
 ```
 
-more links
+## More links
+
 <https://azure.github.io/AppService/2021/03/26/Secure-resilient-site-with-custom-domain.html>
+
+Example call back links and token store
 
 <https://thx1140front.azurewebsites.net/.auth/login/aad/callback>
 
 <https://thx1140front.azurewebsites.net/.auth/me>
 
-notes
+## More notes
 
 ```bash
 api://<back app client id>/user_impersonation
