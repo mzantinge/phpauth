@@ -72,9 +72,7 @@ response=$(curl -X POST -F 'grant_type=urn:ietf:params:oauth:grant-type:jwt-bear
              -F "scope=openid profile email" \
              -F "requested_token_use=on_behalf_of" \
         https://login.microsoftonline.com/thx1139corp.onmicrosoft.com/oauth2/v2.0/token|jq -r ".access_token")
-```
 
-```bash
 curl -H "Authorization: Bearer ${response}" https://graph.microsoft.com/oidc/userinfo
 ```
 
