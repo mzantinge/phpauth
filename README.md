@@ -108,4 +108,4 @@ Example call back links and token store
 api://<back app client id>/user_impersonation
 ```
 
-Allow the application to access thx1140back on behalf of the signed-in user
+Tool tip: Allow the application to access thx1140back on behalf of the signed-in user
