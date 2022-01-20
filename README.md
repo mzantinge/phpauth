@@ -50,7 +50,7 @@ echo $id
 az rest --method PATCH --url https://graph.microsoft.com/v1.0/applications/$id --body "{'api':{'requestedAccessTokenVersion':2}}"
 ```
 
-MANUAL: COPY TOKEN IN LINE BELOW
+MANUAL: copy token in line below to test
 
 ```bash
 TOKEN="<snip>"
@@ -61,6 +61,9 @@ MANUAL: admin consent on backend, so that it can get an access token for graph
 
 MANUAL: create secret on backend app registration
 
+MANUAL: update `back/index.php` with secret
+
+## Sample on behalf of 
 ```bash
 response=$(curl -X POST -F 'grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer' \
              -F 'client_id=fee96351-9eda-4fb7-a91b-ac46e9c07358' \
