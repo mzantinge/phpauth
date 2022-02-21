@@ -102,6 +102,14 @@ Example call back links and token store
 
 <https://thx1140front.azurewebsites.net/.auth/me>
 
+<https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-add-app-roles-in-azure-ad-apps>
+
+<https://docs.microsoft.com/en-us/azure/app-service/tutorial-auth-aad?pivots=platform-linux>
+
+<https://auth0.com/docs/secure/tokens/access-tokens>
+
+ID Tokens should not be used to gain access to an API. Each token contains information for the intended audience (which is usually the recipient). Per the OpenID Connect specification, the audience of the ID Token (indicated by the aud claim) must be the client ID of the application making the authentication request. If this is not the case, you should not trust the token. Conversely, an API expects a token with the aud value to equal the API's unique identifier. Therefore, unless you maintain control over both the application and the API, sending an ID Token to an API will generally not work. Furthermore, the ID Token is signed with a secret known only to the application itself. If an API were to accept an ID Token, it would have no way of knowing if the application has modified the token (such as adding more scopes) and resigned it.
+
 ## More notes
 
 ```bash
