@@ -64,7 +64,7 @@ $json = json_decode($result, true);
 <h3>Graph Access Token</h3>
 <?php
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, "https://login.microsoftonline.com/3f22735f-578d-4544-a1dd-f60506f832cb/oauth2/token");
+curl_setopt($ch, CURLOPT_URL, "https://login.microsoftonline.com/3f22735f-578d-4544-a1dd-f60506f832cb/oauth2/v2.0/token");
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, "grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer"
     ."&client_id=".urlencode("f93dc346-f757-4a12-b20a-40e778e6e731")
