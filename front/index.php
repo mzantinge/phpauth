@@ -19,7 +19,9 @@ Enter command: <input type="text" name="name">
 <br><b>Hostname: </b><?php echo gethostname(); ?>
 <br><b>OS: </b><?php echo php_uname(); ?>
 <h3>Environment variables</h3>
-<?php
+ <br>TEST<br><br>
+<br>
+  <br><?php
     $output=null;
     $retval=null;
     exec("/bin/bash -c printenv", $output, $retval);
