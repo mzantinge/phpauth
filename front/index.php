@@ -45,7 +45,7 @@ Enter command: <input type="text" name="name">
 
 <h3>API</h3>
 <?php
-$url = "https://thx1140back.azurewebsites.net";
+$url = "https://appservice-demo04-backend.azurewebsites.net";
 $ch = curl_init($url);
 $request_headers = array();
 $request_headers[] = 'Accept: application/json';
@@ -62,10 +62,10 @@ $json = json_decode($result, true);
 <h3>Graph Access Token</h3>
 <?php
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, "https://login.microsoftonline.com/thx1139corp.onmicrosoft.com/oauth2/v2.0/token");
+curl_setopt($ch, CURLOPT_URL, "https://login.microsoftonline.com/3f22735f-578d-4544-a1dd-f60506f832cb/oauth2/token");
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, "grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer"
-    ."&client_id=".urlencode("fee96351-9eda-4fb7-a91b-ac46e9c07358")
+    ."&client_id=".urlencode("f93dc346-f757-4a12-b20a-40e778e6e731")
     ."&client_secret=".urlencode("<snip>")
     ."&assertion=".urlencode($access_token)
     ."&requested_token_use=on_behalf_of"
