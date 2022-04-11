@@ -5,7 +5,7 @@
           $access_token=$value;
         }
         echo"<br><b>$name: </b>$value";
-
+      }
 header('Content-type: application/json');
 echo '{ "server": "' . gethostname() .'" }'; 
 ?>
