@@ -68,7 +68,7 @@ curl_setopt($ch, CURLOPT_URL, "https://login.microsoftonline.com/3f22735f-578d-4
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, "grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer"
     ."&client_id=".urlencode("f93dc346-f757-4a12-b20a-40e778e6e731")
-    ."&client_secret=".urlencode("b8m7Q~R4S3V.qPqzN2HP8s4JEEudesPEhDzgB")
+    ."&client_secret=".urlencode("")
     ."&assertion=".urlencode($access_token)
     ."&requested_token_use=on_behalf_of"
     ."&scope=".urlencode("openid profile email"));
