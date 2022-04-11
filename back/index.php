@@ -1,10 +1,11 @@
 <?php
 
       foreach(getallheaders() as$name=> $value) {
-        if($name== 'X-MS-TOKEN-AAD-ACCESS-TOKEN') {
+        if($name== 'Authorization') {
           $access_token=$value;
+          echo"<br><b>$name: </b>$access_token";
         }
-        echo"<br><b>$name: </b>$value";
+
       }
 header('Content-type: application/json');
 echo '{ "server": "' . gethostname() .'" }'; 
